@@ -55,7 +55,7 @@ export default function SearchAppBar() {
     let output = 0
 
     const handleWord = (event) => {
-        setWord(event.target.value) 
+        setWord(event.target.value)
     }
 
     const getData = async (word) => {
@@ -114,21 +114,16 @@ export default function SearchAppBar() {
                                 </>
                                 :
                                 <>
-                                    <Autocomplete id="custom-input-demo"
-                                        options={options}
-                                        renderInput={(params) => (
-                                            <Search ref={params.InputProps.ref}
-                                                style={{ display: "flex", justifyContent: "space-between" }}>
-                                                <StyledInputBase {...params.inputProps}
-                                                    placeholder="search"
-                                                    inputProps={{ 'aria-label': 'search' }}
-                                                    value={word}
-                                                    style={{ color: "white" }}
-                                                    onChange={handleWord} onKeyDown={handleEnter}
-                                                />
-                                                <Button variant="contained" onClick={handleSearch} style={{ backgroundColor: "#E30425" }}>search</Button>
-                                            </Search>)}
-                                    />
+                                    <Search
+                                        style={{ display: "flex", justifyContent: "space-between" }}>
+                                        <StyledInputBase
+                                            placeholder="search"
+                                            inputProps={{ 'aria-label': 'search' }}
+                                            style={{ color: "white" }}
+                                            onChange={handleWord} onKeyDown={handleEnter}
+                                        />
+                                        <Button variant="contained" onClick={handleSearch} style={{ backgroundColor: "#E30425" }}>search</Button>
+                                    </Search>
                                     <MdClose style={{ color: "#E0B0FF", cursor: "pointer", padding: "5px", height: "60px", width: "60px" }}
                                         onClick={toggelIcons}
                                     />
@@ -199,14 +194,24 @@ export default function SearchAppBar() {
                         </div>
                     </div>
                 </div>
-                // Look up a word, learn it forever
                 :
                 output === 0 ?
                     <div style={{ fontFamily: "Kumbh Sans", color: "#4E0D3A" }}>
-                        <Container fixed>
-                            <Box sx={{ bgcolor: '#eabfff', height: '100vh' }}>
-                                <h2 style={{ textAlign: "center", paddingTop: "20%", width: "100%" }}>Look up a word, learn it forever</h2>
-                                <Autocomplete
+                        <Container>
+                            <Box sx={{
+                                bgcolor: '#eabfff', height: '91vh',
+                            }}>
+                                <h2 style={{ paddingTop: "20%", paddingBottom: "5px",marginLeft:"30%" }}>Look up a word, learn it forever</h2>
+                                <Search style={{ display: "flex", justifyContent: "space-between", width:"45ch",marginLeft:"30%"}}>
+                                    <StyledInputBase
+                                        placeholder="search"
+                                        inputProps={{ 'aria-label': 'search' }}
+                                        style={{ color: "white", width: '45ch' }}
+                                        onChange={handleWord} onKeyDown={handleEnter}
+                                    />
+                                    <Button variant="contained" onClick={handleSearch} style={{ backgroundColor: "#E30425" }}>search</Button>
+                                </Search>
+                                {/* <Autocomplete
                                     sx={{
                                         display: 'inline-block',
                                         '& input': {
@@ -231,7 +236,7 @@ export default function SearchAppBar() {
                                             <SearchIcon onClick={handleSearch} style={{ cursor: "pointer", padding: "10px", height: "50px", width: "50px" }} />
                                         </div>
                                     )}
-                                />
+                                /> */}
                             </Box>
                         </Container>
                     </div>
@@ -248,5 +253,5 @@ export default function SearchAppBar() {
     );
 }
 
-const options = ["rock","plan","peicemeal","sun","apple","amzae","happy","sky","pragmatic", "star", "rhetorical","create","hello","win","work","bee","what","life","dream","matter","resource", "pillow", "power","chocolate","software","authentic","great", "previous","elephant","lexicon","area" ].sort()
+// const options = ["rock","plan","peicemeal","sun","apple","amzae","happy","sky","pragmatic", "star", "rhetorical","create","hello","win","work","bee","what","life","dream","matter","resource", "pillow", "power","chocolate","software","authentic","great", "previous","elephant","lexicon","area" ].sort()
 // englishWords
