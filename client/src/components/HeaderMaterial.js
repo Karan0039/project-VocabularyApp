@@ -248,5 +248,5 @@ export default function SearchAppBar() {
     );
 }
 
-const options = ["qdd","dweed"]
+const options = ["rock","plan","peicemeal","sun","apple","amzae","happy","sky","pragmatic", "star", "rhetorical","create","hello","win","work","bee","what","life","dream","matter","resource", "pillow", "power","chocolate","software","authentic","great", "previous","elephant","lexicon","area" ].sort()
 // englishWords
