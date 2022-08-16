@@ -107,8 +107,8 @@ export default function SearchAppBar() {
                                         noWrap
                                         component="div"
                                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-                                        onClick={() => window.location.reload()}>
-                                        <h1 style={{cursor: "pointer"}}>Lexsikon</h1>
+                                        >
+                                        <h1 style={{cursor: "pointer"}} onClick={() => window.location.reload()}>Lexsikon</h1>
                                     </Typography>
                                     <SearchIcon onClick={toggelIcons} style={{ cursor: "pointer", padding: "10px", height: "50px", width: "50px" }} />
                                 </>
