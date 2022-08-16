@@ -55,11 +55,11 @@ export default function SearchAppBar() {
     let output = 0
 
     const handleWord = (event) => {
-        setWord(event.target.value)
+        setWord(event.target.value) 
     }
 
     const getData = async (word) => {
-        let data = await fetch("http://localhost:4000/" + word.trim())
+        let data = await fetch("/" + word.trim())
         data = data.json()
         return data
     }
