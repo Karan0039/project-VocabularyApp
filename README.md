@@ -28,3 +28,5 @@
 - The UI is expected to be appealing and almost match the app in the attached screenshots. 
 
 - Using GraphQL to expose data to the client-side will be given a preference and additional points. 
+
+hosted at => lexsikon.herokuapp.com
